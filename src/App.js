@@ -16,11 +16,11 @@ function App() {
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = 'black';
-      document.title = 'Textutils - Dark Mode';
+      // document.title = 'Textutils - Dark Mode';
     } else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      document.title = 'Textutils - Light Mode';
+      // document.title = 'Textutils - Light Mode';
     }
   };
 
