@@ -52,17 +52,17 @@ export default function TextForm(props) {
                         rows="8"
                     ></textarea>
                 </div>
-                <button className='btn btn-primary mx-2' onClick={handleUpClick}>Convert to UpperCase</button>
-                <button className='btn btn-primary mx-2' onClick={handleDownClick}>Convert to LowerCase</button>
-                <button className='btn btn-primary mx-2' onClick={handleClearClick}>Clear Text</button>
-                <button className='btn btn-primary mx-2' onClick={speak}>Speak</button>
-                <button className='btn btn-primary mx-2' onClick={copy}>Copy Text</button>
-                <button className='btn btn-primary mx-2' onClick={handleExtraSpaces}>Remove Extra spaces</button>
+                <button className='btn btn-primary mx-2 my-1' onClick={handleUpClick}>Convert to UpperCase</button>
+                <button className='btn btn-primary mx-2 my-1' onClick={handleDownClick}>Convert to LowerCase</button>
+                <button className='btn btn-primary mx-2 my-1' onClick={handleClearClick}>Clear Text</button>
+                <button className='btn btn-primary mx-2 my-1' onClick={speak}>Speak</button>
+                <button className='btn btn-primary mx-2 my-1' onClick={copy}>Copy Text</button>
+                <button className='btn btn-primary mx-2 my-1' onClick={handleExtraSpaces}>Remove Extra spaces</button>
             </div>
             <div className={`container my-3 text-${props.mode==='light'?'dark':'light'}`}>
                 <h2>Your Text Summary</h2>
-                <p>{text.split(/\s+/).filter(word => word !== '').length} words and {text.length} characters</p>
-                <p>{0.008 * text.split(/\s+/).filter(word => word !== '').length} Minutes Read</p>
+                <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+                <p>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Minutes Read</p>
                 <h2>Preview</h2>
                 <p>{text}</p>
             </div>
